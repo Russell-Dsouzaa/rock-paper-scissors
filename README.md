@@ -1,7 +1,5 @@
 ### Took me 1.5 hours to write the javaScript program and an hour to rectify bugs and logical errors
 
-<hr style = "height:2px;">
-
 Also, the very first time that we load the live server, the console.log(); outputs arn't shown even if we open the browser console. 
 The brower console updates all of the console.log(); outputs all at once, once we exit the program.
 
@@ -19,8 +17,7 @@ From second time onwards, the browser console updates as expected.
     Alternatively, you can use the browser's settings to navigate to the browser console
         3 dots > more tools > developer tools > console (make sure you're in console pane, by default it opens up the elements pane)
 <br>
-<hr style = "height:2px;">
-<br>
+<hr style = "height:1px;">
 
 ## Rules :
     1. Each match consists of 5 rounds.
