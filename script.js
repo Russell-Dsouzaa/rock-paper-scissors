@@ -66,7 +66,7 @@ function playGame() {
 
         if (reply.toLowerCase() == 'y') {
             playGame();
-        } else if (reply.toLowerCase() == 'n') {                 // using just else block here made ie so that, if the user entered any invalid input, it would still print the "Thanks for playing" string to the console along with with re-prompting the user to play again.
+        } else if (reply.toLowerCase() == 'n') {                 // using just else block here made it so that, if the user entered any invalid input, it would still print the "Thanks for playing" string to the console along with with re-prompting the user to play again.
             console.log("Thanks for playing");
         }
     } while (reply.toLowerCase() !== 'y' &&  reply.toLowerCase() !== 'n');
