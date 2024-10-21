@@ -61,8 +61,14 @@ function playGame(humanSelection) {
     var computerSelection = getComputerSelection();
 
     playRound(computerSelection,humanSelection);
-    console.log(`Your selection was ${humanSelection} while the computer selected ${computerSelection} and the current score is ${score}`);
+    display.textContent = `Your selection was ${humanSelection.toUpperCase()} while the computer selected ${computerSelection.toUpperCase()} and the current score is ${score}`;
 
+    if (score > 2) {
+        display.textContent = "You did it! You won! ";
+    } else if (score < -2) {
+        display.textContent = "You lost :("
+    }
+    /*
     if (score < 1) {
         console.log("You lose");
     } else if (score == 0) {
@@ -72,7 +78,7 @@ function playGame(humanSelection) {
         console.log("You did it! You won!");
     }
 
-    /*
+    
     do {
         var reply = prompt("Do you wish to play again? (Y/N)");
 
@@ -85,6 +91,10 @@ function playGame(humanSelection) {
     */
 }
 
+var display = document.querySelector(".display");
+display.style.color = "black";
+display.style.backgroundColor = "white";
+
 let rock = document.querySelector(".rock");
 rock.addEventListener('click', () => playGame("rock"));
 
@@ -93,3 +103,9 @@ paper.addEventListener('click', () => playGame("paper"));
 
 let scissors = document.querySelector(".scissors");
 scissors.addEventListener('click', () => playGame("scissors"));
+
+let reset = document.querySelector(".reset");
+reset.addEventListener('click', () => {
+    score = 0;
+    display.textContent = `Score has been reset back to zero. Current score: ${score}`;
+});

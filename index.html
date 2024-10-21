@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class = "rock">
-        <button><i class="fa-solid fa-hand-back-fist"></i><div>rock</div></button>
+    <div class = "container">
+        <div class = "rock">
+            <button class="button"><i class="fa-solid fa-hand-back-fist"></i><div>rock</div></button>
+        </div>
+        <div class = "paper">
+            <button class="button"><i class="fa-solid fa-hand"></i><div>paper</button>
+        </div>
+        <div class = "scissors">
+            <button class = "button"><i class="fa-solid fa-hand-scissors"></i><div>scissors</div></button>
+        </div>
     </div>
-    <div class = "paper">
-        <button><i class="fa-solid fa-hand"></i><div>paper</button>
-    </div>
-    <div class = "scissors">
-        <button><i class="fa-solid fa-hand-scissors"></i><div>scissors</div></button>
-    </div>
+    <div class = "display"></div>
+    <button class = "reset">Reset Score</button>
     <script src = "./script.js"></script>
 </body>
 </html>
