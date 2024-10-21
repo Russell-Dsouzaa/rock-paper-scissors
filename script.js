@@ -12,6 +12,7 @@ function getComputerSelection() {
     }
 }
 
+/*
 function getHumanSelection() {
 
     do {
@@ -20,6 +21,7 @@ function getHumanSelection() {
 
     return choice.toLowerCase();
 }
+*/
 
 function playRound(computerChoice,humanChoice) {
     if (computerChoice == humanChoice) {
@@ -45,22 +47,32 @@ function playRound(computerChoice,humanChoice) {
     }
 }
 
-function playGame() {
-    score = 0;                // resetting the score for each new game. Without it, if we chose to play again, the score would be continued from the previous game's value.
+function playGame(humanSelection) {
+    //score = 0;                // resetting the score for each new game. Without it, if we chose to play again, the score would be continued from the previous game's value.
 
+    /*
     for (let i = 0; i < 5; i++) {
         var computerSelection = getComputerSelection();
         var humanSelection = getHumanSelection();
         playRound(computerSelection,humanSelection);
         console.log(`Your selection was ${humanSelection} while the computer selected ${computerSelection} and the current score is ${score}`);
     }
+    */
+    var computerSelection = getComputerSelection();
+
+    playRound(computerSelection,humanSelection);
+    console.log(`Your selection was ${humanSelection} while the computer selected ${computerSelection} and the current score is ${score}`);
 
     if (score < 1) {
         console.log("You lose");
-    } else {
+    } else if (score == 0) {
+        console.log("It's a tie!");
+    } 
+    else {
         console.log("You did it! You won!");
     }
 
+    /*
     do {
         var reply = prompt("Do you wish to play again? (Y/N)");
 
@@ -70,6 +82,14 @@ function playGame() {
             console.log("Thanks for playing");
         }
     } while (reply.toLowerCase() !== 'y' &&  reply.toLowerCase() !== 'n');
+    */
 }
 
-playGame();
+let rock = document.querySelector(".rock");
+rock.addEventListener('click', () => playGame("rock"));
+
+let paper = document.querySelector(".paper");
+paper.addEventListener('click', () => playGame("paper"));
+
+let scissors = document.querySelector(".scissors");
+scissors.addEventListener('click', () => playGame("scissors"));
