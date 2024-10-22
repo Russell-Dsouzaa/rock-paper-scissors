@@ -2,6 +2,10 @@
 
 Also, the very first time we load the server, the icons within the buttons might not load at all. In such cases, reload the webpage.
 
+<br>
+
+Clicking and holding onto the buttons makes the icons to grow in size while makes the text shrink until they disappear. These transitions happen within 0.6 seconds. Which means, if the user clicks on them without holding onto it, the animation ends abruptly. This is meant to happen.
+
 <br><br>
 
 ## How to Play : 
